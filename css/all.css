@@ -60,7 +60,7 @@ a {
   color: #ffd366;
 }
 .header h1 a {
-  background-image: url(../img/BMICLogo.png);
+  background: url(../img/BMICLogo.png);
   display: block;
   width: 117px;
   height: 117px;
