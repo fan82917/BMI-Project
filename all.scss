@@ -1,0 +1,175 @@
+@import '_reset.scss';
+
+.header{
+    max-width: 100%;
+    background-color: #424242;
+    display: flex;
+    justify-content: center;
+    color: #ffd366;
+
+    h1{
+        a{  
+            background-image: url(img/BMICLogo.png);
+            display: block;
+            width: 117px;
+            height: 117px;
+            text-indent: 101%;
+            overflow:hidden;
+            white-space: nowrap;
+            margin: 20px;
+        }
+        
+    }
+    .header-text{
+        padding: 20px;
+
+        label{
+            display: block;
+        }
+        input{
+            
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #424242;
+            border:2px solid #ffd366;
+            font-size: 20px;
+            color: #ffd366;
+        }
+    }
+
+    .send{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #ffd366;
+        color: #424242;
+        font-size: 26px;
+        border: none;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .send:hover{
+        background-color: #FF982D;
+    }
+
+    .rst{
+        display: none;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #424242;
+        color: #ffd366;
+        font-size: 20px;
+        border: 3px solid #ffd366;
+        margin: 20px;
+        cursor: pointer;
+        position: relative;
+
+        span{
+            color: #FF1200;
+            position:absolute;
+            right: 4px;
+            bottom: 4px;
+        }
+    }
+
+    .rst.open{
+        display: block;
+    }
+
+    
+
+
+}
+.main{
+    text-align: center;
+
+    h2{
+        font-size:24px ;
+        padding: 30px;
+        font-weight: bold;
+    }
+
+    button{
+        height: 30px;
+        margin-bottom: 10px;
+        background-color: #ffd366;
+        border-radius: 4px;
+        border: 2px solid #424242;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #FF982D;
+    }
+
+    .main-bmi{
+        width: 60%;
+        margin: 0 auto;
+        
+        li,div,h3{
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            margin: 2px 0;
+        }
+
+        h3{
+            font-weight: bold;
+        }
+        p{
+            padding: 0 10px;
+
+            span{
+                font-size: 20px;
+            }
+        }
+
+        .t{
+            border-left: 5px solid #31BAF9;
+        }
+        .ok{
+            border-left: 5px solid #86D73F;
+        }
+        .f{
+            border-left: 5px solid #FF982D;
+        }
+        .sf{
+            border-left: 5px solid #FF6C03;
+        }
+        .mf{
+            border-left: 5px solid #FF6C03;
+        }
+        .lf{
+            border-left: 5px solid #FF1200;
+        }
+    }
+}
+
+.footer{
+    background-color: #ffd366;
+    text-align: center;
+
+    img{
+        padding: 10px 0;
+    }
+}
+@media (max-width:767px) {
+    .header{
+        flex-direction: column;
+        align-items: center;
+
+        .header-logo{
+            width: 90%;
+        }
+    }
+    .main-bmi{
+        width: 98%;
+
+        li,div,h3{
+          flex-direction: column;
+        }
+    }
+    
+}
