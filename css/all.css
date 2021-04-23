@@ -1,0 +1,204 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  max-width: 100%;
+  background-color: #424242;
+  display: flex;
+  justify-content: center;
+  color: #ffd366;
+}
+.header h1 a {
+  background-image: url(/img/BMICLogo.png);
+  display: block;
+  width: 117px;
+  height: 117px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px;
+}
+.header .header-text {
+  padding: 20px;
+}
+.header .header-text label {
+  display: block;
+}
+.header .header-text input {
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  border: 2px solid #ffd366;
+  font-size: 20px;
+  color: #ffd366;
+}
+.header .send {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ffd366;
+  color: #424242;
+  font-size: 26px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+}
+.header .send:hover {
+  background-color: #FF982D;
+}
+.header .rst {
+  display: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #424242;
+  color: #ffd366;
+  font-size: 20px;
+  border: 3px solid #ffd366;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.header .rst span {
+  color: #FF1200;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+}
+.header .rst.open {
+  display: block;
+}
+
+.main {
+  text-align: center;
+}
+.main h2 {
+  font-size: 24px;
+  padding: 30px;
+  font-weight: bold;
+}
+.main button {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #ffd366;
+  border-radius: 4px;
+  border: 2px solid #424242;
+  cursor: pointer;
+}
+.main button:hover {
+  background-color: #FF982D;
+}
+.main .main-bmi {
+  width: 60%;
+  margin: 0 auto;
+}
+.main .main-bmi li, .main .main-bmi div, .main .main-bmi h3 {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 2px 0;
+}
+.main .main-bmi h3 {
+  font-weight: bold;
+}
+.main .main-bmi p {
+  padding: 0 10px;
+}
+.main .main-bmi p span {
+  font-size: 20px;
+}
+.main .main-bmi .t {
+  border-left: 5px solid #31BAF9;
+}
+.main .main-bmi .ok {
+  border-left: 5px solid #86D73F;
+}
+.main .main-bmi .f {
+  border-left: 5px solid #FF982D;
+}
+.main .main-bmi .sf {
+  border-left: 5px solid #FF6C03;
+}
+.main .main-bmi .mf {
+  border-left: 5px solid #FF6C03;
+}
+.main .main-bmi .lf {
+  border-left: 5px solid #FF1200;
+}
+
+.footer {
+  background-color: #ffd366;
+  text-align: center;
+}
+.footer img {
+  padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .header-logo {
+    width: 90%;
+  }
+
+  .main-bmi {
+    width: 98%;
+  }
+  .main-bmi li, .main-bmi div, .main-bmi h3 {
+    flex-direction: column;
+  }
+}
