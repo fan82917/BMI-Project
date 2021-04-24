@@ -37,50 +37,65 @@
         }
     }
 
-    .send{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-color: #ffd366;
-        color: #424242;
-        font-size: 24px;
-        border: none;
-        margin: 20px;
-        cursor: pointer;
-    }
+    .header-send{
 
-    .send:hover{
-        background-color: #FF982D;
-    }
-
-    .rst{
-        display: none;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-color: #424242;
-        color: #ffd366;
-        font-size: 20px;
-        border: 3px solid #ffd366;
-        margin: 20px;
-        cursor: pointer;
-        position: relative;
-
-        span{
-            color: #FF1200;
-            position:absolute;
-            right: 4px;
-            bottom: 4px;
+        
+        button{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ffd366;
+            color: #424242;
+            font-size: 24px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #FF982D;
         }
     }
+    .header-send.rst{
+        display: none;
 
-    .rst.open{
+    } 
+    .header-rst{
+        display: none;
+        align-items: center;
+
+        button{         
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #424242;
+            color: #ffd366;
+            font-size: 26px;
+            border: 3px solid #ffd366;
+            margin: 20px 10px;
+            cursor: pointer;
+            position: relative;
+            span{
+                color: #FF1200;
+                position:absolute;
+                right: 4px;
+                bottom: 4px;
+            }
+            p{
+                font-size: 14px; 
+            }
+        }
+
+        p{
+            display: inline-block;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+    .header-rst.open{
         display: block;
     }
 
     
-
-
 }
 .main{
     text-align: center;
@@ -163,6 +178,7 @@
         .header-logo{
             width: 90%;
         }
+
     }
     .main-bmi{
         width: 98%;
