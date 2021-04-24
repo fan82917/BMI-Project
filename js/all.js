@@ -1,5 +1,5 @@
-const send = document.querySelector('.send');
-const rstsend = document.querySelector('.rst');
+const sendBtn = document.querySelector('.header-send');
+const rstBtn = document.querySelector('.header-rst');
 const bmilist = document.querySelector('.main-bmi');
 const delBtn = document.querySelector('.delBtn');
 let data = JSON.parse(localStorage.getItem('listData')) || [];
@@ -16,38 +16,35 @@ function updateList(item){
 
     let el = document.querySelectorAll('.main-bmi li');
     let h3 = document.querySelectorAll('h3');
-    let rst = document.querySelector('.rst p');
+    let rstBMI = document.querySelector('.rst h2');
+    let BMItext = document.querySelector('.header-rst > p')
     for(let j = 0; len>j ;j++){
         let str = item[j].BMI;
+        rstBMI.textContent=str;
         if(str<18.5){
             el[j].setAttribute('class','t');
             h3[j].textContent='過輕';
-            rst.textContent='過輕';
+            BMItext.textContent='過輕';  
         }else if(18.5<=str && str<24){
             el[j].setAttribute('class','ok');
-            h3[j].textContent='理想';
-            rst.textContent='理想';
+            h3[j].textContent='理想';        
         }else if(24<=str && str<27){
             el[j].setAttribute('class','f');
-            h3[j].textContent='過重';
-            rst.textContent='過重';
+            h3[j].textContent='過重';      
         }else if(27<=str && str<30){
             el[j].setAttribute('class','sf');
-            h3[j].textContent='輕度肥胖';
-            rst.textContent='輕度肥胖';
+            h3[j].textContent='輕度肥胖';   
         }else if(30<=str && str<35){
             el[j].setAttribute('class','mf');
-            h3[j].textContent='中度肥胖';
-            rst.textContent='中度肥胖';
+            h3[j].textContent='中度肥胖';      
         }else if(35<=str){
             el[j].setAttribute('class','lf');
-            h3[j].textContent='重度肥胖';
-            rst.textContent='重度肥胖';
+            h3[j].textContent='重度肥胖'; 
         }
     }
 }
 
-send.addEventListener('click',addData);
+sendBtn.addEventListener('click',addData);
 function addData(e){
     e.preventDefault();
     let height = document.querySelector('.height').value;
@@ -67,8 +64,8 @@ function addData(e){
         alert('請輸入數字！');
         return;
     }
-    send.classList.toggle('rst');
-    rstsend.classList.toggle('open');
+    sendBtn.classList.toggle('rst');
+    rstBtn.classList.toggle('open');
     data.push(add);
     updateList(data);
     localStorage.setItem('listData',JSON.stringify(data));
@@ -76,10 +73,10 @@ function addData(e){
     document.querySelector('.weight').value="";
 };
 
-rstsend.addEventListener('click',rst);
+rstBtn.addEventListener('click',rst);
 function rst(e){
-    send.classList.toggle('rst');
-    rstsend.classList.toggle('open');
+    sendBtn.classList.toggle('rst');
+    rstBtn.classList.toggle('open');
 }
 
 
