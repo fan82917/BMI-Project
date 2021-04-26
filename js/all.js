@@ -15,31 +15,56 @@ function updateList(item){
     bmilist.innerHTML = str;
 
     let el = document.querySelectorAll('.main-bmi li');
-    let h3 = document.querySelectorAll('h3');
+    let h3 = document.querySelectorAll('.main-bmi h3');
     let rstBMI = document.querySelector('.rst h2');
-    let BMItext = document.querySelector('.header-rst > p')
+    let BMItext = document.querySelector('.header-rst > p');
+    let rstcolor = document.querySelector('.header-rst button');
+    let rstspan = document.querySelector('.header-rst span');
     for(let j = 0; len>j ;j++){
         let str = item[j].BMI;
         rstBMI.textContent=str;
         if(str<18.5){
             el[j].setAttribute('class','t');
             h3[j].textContent='過輕';
-            BMItext.textContent='過輕';  
+            BMItext.textContent='過輕';
+            BMItext.setAttribute('style','color:#31BAF9;');
+            rstcolor.setAttribute('style','color: #31BAF9;border: 3px solid #31BAF9;');
+            rstspan.setAttribute('style','background:#31BAF9;');
         }else if(18.5<=str && str<24){
             el[j].setAttribute('class','ok');
-            h3[j].textContent='理想';        
+            h3[j].textContent='理想';
+            BMItext.textContent='理想';
+            BMItext.setAttribute('style','color:#86D73F;');
+            rstcolor.setAttribute('style','color: #86D73F;border: 3px solid #86D73F;');
+            rstspan.setAttribute('style','background:#86D73F;');        
         }else if(24<=str && str<27){
             el[j].setAttribute('class','f');
-            h3[j].textContent='過重';      
+            h3[j].textContent='過重';
+            BMItext.textContent='過重';
+            BMItext.setAttribute('style','color:#FF982D;');
+            rstcolor.setAttribute('style','color: #FF982D;border: 3px solid #FF982D;');
+            rstspan.setAttribute('style','background:#FF982D;');      
         }else if(27<=str && str<30){
             el[j].setAttribute('class','sf');
-            h3[j].textContent='輕度肥胖';   
+            h3[j].textContent='輕度肥胖';
+            BMItext.textContent='輕度肥胖';
+            BMItext.setAttribute('style','color:#FF6C03;');
+            rstcolor.setAttribute('style','color: #FF6C03;border: 3px solid #FF6C03;');
+            rstspan.setAttribute('style','background:#FF6C03;');   
         }else if(30<=str && str<35){
             el[j].setAttribute('class','mf');
-            h3[j].textContent='中度肥胖';      
+            h3[j].textContent='中度肥胖';
+            BMItext.textContent='中度肥胖';
+            BMItext.setAttribute('style','color:#FF6C03;');
+            rstcolor.setAttribute('style','color: #FF6C03;border: 3px solid #FF6C03;');
+            rstspan.setAttribute('style','background:#FF6C03;');      
         }else if(35<=str){
             el[j].setAttribute('class','lf');
-            h3[j].textContent='重度肥胖'; 
+            h3[j].textContent='重度肥胖';
+            BMItext.textContent='重度肥胖';
+            BMItext.setAttribute('style','color:#FF1200;');
+            rstcolor.setAttribute('style','color: #FF1200;border: 3px solid #FF1200;');
+            rstspan.setAttribute('style','background:#FF1200;'); 
         }
     }
 }
