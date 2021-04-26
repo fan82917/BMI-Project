@@ -102,33 +102,35 @@ a {
 }
 .header .header-rst {
   display: none;
-  align-items: center;
 }
 .header .header-rst button {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   background-color: #424242;
-  color: #ffd366;
   font-size: 26px;
-  border: 3px solid #ffd366;
   margin: 20px 10px;
   cursor: pointer;
   position: relative;
 }
 .header .header-rst button span {
-  color: #FF1200;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   position: absolute;
   right: 4px;
   bottom: 4px;
 }
+.header .header-rst button h2 {
+  font-size: 32px;
+}
 .header .header-rst button p {
   font-size: 14px;
+  display: block;
 }
 .header .header-rst p {
   display: inline-block;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 32px;
 }
 .header .header-rst.open {
   display: block;
