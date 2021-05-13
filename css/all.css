@@ -39,7 +39,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -55,10 +55,15 @@ a {
 .header {
   max-width: 100%;
   background-color: #424242;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #ffd366;
 }
+
 .header h1 a {
   background: url(../img/BMICLogo.png);
   display: block;
@@ -69,13 +74,16 @@ a {
   white-space: nowrap;
   margin: 20px;
 }
-.header .header-text {
+
+.header-text {
   padding: 20px;
 }
-.header .header-text label {
+
+.header-text label {
   display: block;
 }
-.header .header-text input {
+
+.header-text input {
   margin: 5px 0;
   border-radius: 5px;
   background-color: #424242;
@@ -83,7 +91,13 @@ a {
   font-size: 20px;
   color: #ffd366;
 }
-.header .header-send button {
+
+.header-text .header-alert {
+  display: block;
+  color: red;
+}
+
+.header-send button {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -94,16 +108,20 @@ a {
   margin: 20px;
   cursor: pointer;
 }
-.header .header-send button:hover {
-  background-color: #FF982D;
+
+.header-send button:hover {
+  background-color: #ff982d;
 }
-.header .header-send.rst {
+
+.header-send.rst {
   display: none;
 }
-.header .header-rst {
+
+.header-rst {
   display: none;
 }
-.header .header-rst button {
+
+.header-rst button {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -113,7 +131,8 @@ a {
   cursor: pointer;
   position: relative;
 }
-.header .header-rst button span {
+
+.header-rst button span {
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -121,100 +140,140 @@ a {
   right: 4px;
   bottom: 4px;
 }
-.header .header-rst button h2 {
+
+.header-rst button h2 {
   font-size: 32px;
 }
-.header .header-rst button p {
+
+.header-rst button p {
   font-size: 14px;
   display: block;
 }
-.header .header-rst p {
+
+.header-rst p {
   display: inline-block;
   font-size: 32px;
 }
-.header .header-rst.open {
+
+.header-rst.open {
   display: block;
 }
 
 .main {
   text-align: center;
+  min-height: 100%;
 }
+
 .main h2 {
   font-size: 24px;
   padding: 30px;
   font-weight: bold;
 }
+
 .main button {
+  display: none;
   height: 30px;
-  margin-bottom: 10px;
   background-color: #ffd366;
   border-radius: 4px;
   border: 2px solid #424242;
   cursor: pointer;
 }
-.main button:hover {
-  background-color: #FF982D;
+
+.delBtn.on {
+  display: block;
+  margin: 20px auto;
 }
-.main .main-bmi {
+
+.main-bmi {
   width: 60%;
   margin: 0 auto;
 }
-.main .main-bmi li, .main .main-bmi div, .main .main-bmi h3 {
+
+.main-bmi li,
+.main-bmi div,
+.main-bmi h3 {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 5px;
   margin: 2px 0;
 }
-.main .main-bmi h3 {
+
+.main-bmi h3 {
   font-weight: bold;
 }
-.main .main-bmi p {
+
+.main-bmi p {
   padding: 0 10px;
 }
-.main .main-bmi p span {
+
+.main-bmi p span {
   font-size: 20px;
 }
-.main .main-bmi .t {
-  border-left: 5px solid #31BAF9;
+
+.main-bmi a {
+  color: #ff982d;
 }
-.main .main-bmi .ok {
-  border-left: 5px solid #86D73F;
+
+.t {
+  border-left: 5px solid #31baf9;
 }
-.main .main-bmi .f {
-  border-left: 5px solid #FF982D;
+
+.ok {
+  border-left: 5px solid #86d73f;
 }
-.main .main-bmi .sf {
-  border-left: 5px solid #FF6C03;
+
+.f {
+  border-left: 5px solid #ff982d;
 }
-.main .main-bmi .mf {
-  border-left: 5px solid #FF6C03;
+
+.sf {
+  border-left: 5px solid #ff6c03;
 }
-.main .main-bmi .lf {
-  border-left: 5px solid #FF1200;
+
+.mf {
+  border-left: 5px solid #ff6c03;
+}
+
+.lf {
+  border-left: 5px solid #ff1200;
 }
 
 .footer {
   background-color: #ffd366;
   text-align: center;
 }
+
 .footer img {
   padding: 10px 0;
 }
 
 @media (max-width: 767px) {
   .header {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .header .header-logo {
+  .header-logo {
     width: 90%;
   }
-
   .main-bmi {
     width: 98%;
   }
-  .main-bmi li, .main-bmi div, .main-bmi h3 {
-    flex-direction: column;
+  .main-bmi li,
+  .main-bmi div,
+  .main-bmi h3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+/*# sourceMappingURL=all.css.map */
